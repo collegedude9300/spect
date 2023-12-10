@@ -1,6 +1,4 @@
 "use client"
-import Head from 'next/head'
-import Image from 'next/image'
 import Link from 'next/link'
 import { VStack, Button } from '@chakra-ui/react'
 import { Inter } from 'next/font/google'
@@ -16,7 +14,7 @@ export default function ProgramList() {
             <Link href="/ProgramA">
                 <Button backgroundColor="brand.100">  Program A: Life Skills College Integration </Button>
             </Link>
-            <Link href="/ProgramA">
+            <Link href="/ProgramB">
                 <Button backgroundColor="brand.200">  Program B: Life Skills Essentials Program </Button>
             </Link>
                 </VStack>
