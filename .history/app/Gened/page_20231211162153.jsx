@@ -22,7 +22,7 @@ export default function Gened() {
       <h1> Gen Ed: </h1>
       <div>
         <form>
-          <p>{oralComm}</p>
+          <p>{section1ALabel}</p>
           <div className="form-check">
             <input
               type="radio"
@@ -35,7 +35,7 @@ export default function Gened() {
               COMM 101: Oral Communication
             </label>
           </div>
-          <p>{writtenCom}</p>
+          <p>{section1BLabel}</p>
           <div className="form-check">
             <input
               type="radio"
@@ -48,7 +48,7 @@ export default function Gened() {
               ENG 100: College English Composition
             </label>
           </div>
-          <p>{criticalThinking}</p>
+          <p>{section1CLabel}</p>
           <div className="form-check">
             <input
               type="radio"
