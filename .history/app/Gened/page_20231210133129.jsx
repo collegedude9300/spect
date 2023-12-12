@@ -8,14 +8,14 @@ import { Inter } from 'next/font/google'
 import styles from './page.module.css'
 const inter = Inter({ subsets: ['latin'] })
 export default function Gened() {
-  const oralComm = "Section 1A: Oral Communication";
-  const writtenCom = "Section 1B: Written Communication";
-  const criticalThinking = "Section 1C: Critical Thinking and Reading Skills";
-  const numSkills = "Section 2A: Numerical Skills";
-  const sciSkills = "Section 2B: Science Skills";
-  const lifeSkills = "Section 3: Life Skills Essentials";
-  const historySection = "Section 4: History";
-  const electiveSection = "Section 5: Electives";
+  const section1ALabel = 'Section 1A: Oral Communication';
+  const section1BLabel = 'Section 1B: Written Communication';
+  const section1CLabel = 'Section 1C: Critical Thinking and Reading Skills';
+  const section2ALabel = 'Section 2A: Numerical Skills';
+  const section2BLabel = 'Section 2B: Science Skills';
+  const section3Label = 'Section 3: Life Skills Essentials';
+  const section4Label = 'Section 4: History';
+  const section5Label = 'Section 5: Electives';
 
   return (
     <main className={styles.main}>
@@ -28,7 +28,7 @@ export default function Gened() {
               type="radio"
               className="form-check-input"
               id="comm"
-              name="oralComm"
+              name="s1A"
               value="COMM 101"
             />
             <label className="form-check-label" htmlFor="comm">
@@ -41,7 +41,7 @@ export default function Gened() {
               type="radio"
               className="form-check-input"
               id="eng1"
-              name="writtenCom"
+              name="s1B"
               value="ENG 100"
             />
             <label className="form-check-label" htmlFor="eng1">
@@ -54,14 +54,14 @@ export default function Gened() {
               type="radio"
               className="form-check-input"
               id="eng2"
-              name="criticalThinking"
+              name="s1C"
               value="ENG 200"
             />
             <label className="form-check-label" htmlFor="eng2">
               ENG 200: Reading and Analysis
             </label>
           </div>
-          <p>{numSkills}</p>
+          <p>{section2ALabel}</p>
           <div className="form-check">
             <input
               type="radio"
@@ -114,13 +114,13 @@ export default function Gened() {
             </label>
             <br />
           </div>
-          <p>{sciSkills}</p>
+          <p>{section2BLabel}</p>
           <div className="form-check">
             <input
               type="radio"
               className="form-check-input"
               id="bio1"
-              name="sciSkills"
+              name="s2B"
               value="BIO 100"
             />
             <label className="form-check-label" htmlFor="bio1">
@@ -133,7 +133,7 @@ export default function Gened() {
               type="radio"
               className="form-check-input"
               id="bio3"
-              name="sciSkills"
+              name="s2B"
               value="BIO 103"
             />
             <label className="form-check-label" htmlFor="zoo1">
@@ -146,7 +146,7 @@ export default function Gened() {
               type="radio"
               className="form-check-input"
               id="zoo1"
-              name="sciSkills"
+              name="s2B"
               value="ZOO 100"
             />
             <label className="form-check-label" htmlFor="zoo1">
@@ -154,7 +154,7 @@ export default function Gened() {
             </label>
             <br />
           </div>
-          <p>{lifeSkills}</p>
+          <p>{section3Label}</p>
           <div className="form-check">
             <input
               type="radio"
@@ -191,13 +191,13 @@ export default function Gened() {
               LIFE 105: Social Skills (COREQ: Life 101)
             </label>
           </div>
-          <p>{historySection}</p>
+          <p>{section4Label}</p>
           <div className="form-check">
             <input
               type="radio"
               className="form-check-input"
               id="chem1"
-              name="historySection"
+              name="s4"
               value="HIST 100 and 101"
             />
             <label className="form-check-label" htmlFor="chem1">
@@ -210,7 +210,7 @@ export default function Gened() {
               type="radio"
               className="form-check-input"
               id="phys1"
-              name="historySection"
+              name="s4"
               value="HIST 110 and 111"
             />
             <label className="form-check-label" htmlFor="phys1">
@@ -218,13 +218,13 @@ export default function Gened() {
             </label>
             <br />
           </div>
-          <p>{electiveSection}</p>
+          <p>{section5Label}</p>
           <div className="form-check">
             <input
               type="checkbox"
               className="form-check-input"
               id="life103"
-              name="electiveSection"
+              name="s5"
               value="LIFE 103"
             />
             <label className="form-check-label" htmlFor="chem1">
@@ -237,7 +237,7 @@ export default function Gened() {
               type="checkbox"
               className="form-check-input"
               id="life104"
-              name="electiveSection"
+              name="s5"
               value="LIFE 104"
             />
             <label className="form-check-label" htmlFor="phys1">
@@ -250,7 +250,7 @@ export default function Gened() {
               type="checkbox"
               className="form-check-input"
               id="mus114"
-              name="electiveSection"
+              name="s5"
               value="MUS 114"
             />
             <label className="form-check-label" htmlFor="phys1">
@@ -263,7 +263,7 @@ export default function Gened() {
               type="checkbox"
               className="form-check-input"
               id="art100"
-              name="electiveSection"
+              name="s5"
               value="ART 100"
             />
             <label className="form-check-label" htmlFor="phys1">
@@ -276,7 +276,7 @@ export default function Gened() {
               type="checkbox"
               className="form-check-input"
               id="mus113"
-              name="electiveSection"
+              name="s5"
               value="MUS 113"
             />
             <label className="form-check-label" htmlFor="phys1">

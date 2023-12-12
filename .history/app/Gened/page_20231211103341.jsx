@@ -15,7 +15,7 @@ export default function Gened() {
   const sciSkills = "Section 2B: Science Skills";
   const lifeSkills = "Section 3: Life Skills Essentials";
   const historySection = "Section 4: History";
-  const electiveSection = "Section 5: Electives";
+  const s5 = "Section 5: Electives";
 
   return (
     <main className={styles.main}>
@@ -218,13 +218,13 @@ export default function Gened() {
             </label>
             <br />
           </div>
-          <p>{electiveSection}</p>
+          <p>{section5Label}</p>
           <div className="form-check">
             <input
               type="checkbox"
               className="form-check-input"
               id="life103"
-              name="electiveSection"
+              name="s5"
               value="LIFE 103"
             />
             <label className="form-check-label" htmlFor="chem1">
@@ -237,7 +237,7 @@ export default function Gened() {
               type="checkbox"
               className="form-check-input"
               id="life104"
-              name="electiveSection"
+              name="s5"
               value="LIFE 104"
             />
             <label className="form-check-label" htmlFor="phys1">
@@ -250,7 +250,7 @@ export default function Gened() {
               type="checkbox"
               className="form-check-input"
               id="mus114"
-              name="electiveSection"
+              name="s5"
               value="MUS 114"
             />
             <label className="form-check-label" htmlFor="phys1">
@@ -263,7 +263,7 @@ export default function Gened() {
               type="checkbox"
               className="form-check-input"
               id="art100"
-              name="electiveSection"
+              name="s5"
               value="ART 100"
             />
             <label className="form-check-label" htmlFor="phys1">
@@ -276,7 +276,7 @@ export default function Gened() {
               type="checkbox"
               className="form-check-input"
               id="mus113"
-              name="electiveSection"
+              name="s5"
               value="MUS 113"
             />
             <label className="form-check-label" htmlFor="phys1">
