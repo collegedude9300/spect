@@ -1,10 +1,4 @@
-"use client"
-import { useRouter } from 'next/navigation';
-import {useState} from 'react'
-import styles from './page.module.css'
-import Head from 'next/head'
-import Link from 'next/link'
-
+import { useRouter } from 'next/router';
 const validateEmail = (email) => {
   const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-1]\d{1,2}\.[0-1]\d{1,2}\.[0-1]\d{1,2}\.[0-1]\d{1,2}\])|(([a-zA-Z]+\.)+[a-zA-Z]{2,}))$/;
   return re.test(String(email).toLowerCase());
