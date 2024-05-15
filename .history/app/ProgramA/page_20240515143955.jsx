@@ -23,57 +23,7 @@ export default function ProgramA() {
             transition to a four year university.
           </p>
           <h2>List of Program A Classes:</h2>
-          <h5>Unit 1: Job/Career Tips I</h5>
-          <ul>
-            <li>Resume basics: how to structure your resume, category location, etc</li>
-            <li>Cover Letter basics: how to structure your cover letter, writing an effective cover letter, etc</li>
-            <li>career assessments</li>
-          </ul>
-          <h5>Unit 2: Medical Basics I</h5>
-          <ul>
-            <li>health and hygene</li>
-            <li>diffrerent types of insurance</li>
-            <li>how to schedule and find a doctor</li>
-            <li>basics of health insurance</li>
-          </ul>
-          <h5>Unit 3: Taxes and Insurance</h5>
-          <ul>
-            <li>basics of taxes</li>
-            <li>Different forms</li>
-            <li>how to figure out your income tax</li>
-            <li>how to file taxes</li>
-            <li>diffrerent ways to schedule your tax return</li>
-          </ul>
-          <h5>Unit 4: Driving Tips</h5>
-          <ul>
-            <li>permit tips</li>
-            <li>liscnese tips</li>
-            <li>basics of a drivers liscnese</li>
-            <li>how to renew/replace your license</li>
-          </ul>
-          <h5>Unit 5: Cleaning</h5>
-          <ul>
-            <li>how to get some cleaning supplies</li>
-            <li>essential areas where cleaning is needed</li>
-            <li>how to do laundry</li>
-            <li>how to make your bed and change your sheets</li>
-            <li>available services and how to use them</li>
-          </ul>
-          <h5>Unit 6: Shopping and Budgeting</h5>
-          <ul>
-            <li>tips on successful shopping</li>
-            <li>nutrition basics</li>
-            <li>different types of shopping and tips for each</li>
-            <li>different types of grocery stores</li>
-            <li>other essential shopping stores</li>
-          </ul>
-          <h5>Unit 7: Cooking Basics</h5>
-          <ul>
-            <li>instruction terminology</li>
-            <li>measurements</li>
-            <li>nutrition basics</li>
-            <li>tools and what they mean</li>
-          </ul>
+          <h4 className={styles.header}>Life Skills 102: LIFE 101: Life Skills I</h4>
           <h4 className={styles.header}>Life Skills 102: LIFE 102: Life Skills II</h4>
           <h5>Unit 1: Job/Career Tips II</h5>
           <ul>
