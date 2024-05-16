@@ -23,8 +23,9 @@ export default function ProgramB() {
       </p>
       <p>
         In this program, we will have different courses that will modify the life skills program in a way where our more
-        impacted individuals can understand.Our courses and curriculum in this program will include: Life Skills 1, and Life Skills 2, beginning and intermediate respectively
+        impacted individuals can understand.
       </p>
+      <p> Our courses and curriculum in this program will include: Life Skills 1, and Life Skills 2, beginning and intermediate respectively.</p>
       <h4 className={styles.header}>  Life Skills I</h4>
       <h4 className={styles.header}> Life Skills II</h4>
       <p>To learn about Program A, click on the Program A button below, or on the header above.</p>
