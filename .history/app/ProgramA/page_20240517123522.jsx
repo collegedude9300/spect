@@ -23,13 +23,13 @@ export default function ProgramA() {
             transition to a four year university.
           </p>
           <h2>List of Program A Classes:</h2>
-          <h4 className={styles.classHeader}> LIFE 101: Life Skills I</h4>
-          <h4 className={styles.classHeader}> LIFE 102: Life Skills II</h4>
-          <h4 className={styles.classHeader}> LIFE 103: Financial Skills</h4>
-          <h4 className={styles.classHeader}> LIFE 104: Cooking Skills</h4>
-          <h4 className={styles.classHeader}> LIFE 105: Social Skills I: Friends and Conversation</h4>
-          <h4 className={styles.classHeader}> LIFE 106: Social Skills II: Dating and Relationships</h4>
-          <h4 className={styles.classHeader}> LIFE 107: Life Skills Math</h4>
+          <h4 className={styles.header}> LIFE 101: Life Skills I</h4>
+          <h4 className={styles.header}> LIFE 102: Life Skills II</h4>
+          <h4 className={styles.header}> LIFE 103: Financial Skills</h4>
+          <h4 className={styles.header}> LIFE 104: Cooking Skills</h4>
+          <h4 className={styles.header}> LIFE 105: Social Skills I: Friends and Conversation</h4>
+          <h4 className={styles.header}> LIFE 106: Social Skills II: Dating and Relationships</h4>
+          <h4 className={styles.header}> LIFE 107: Life Skills Math</h4>
           <p>
             For more information about the general education curriculum, click on this General Education link below, or the
             Gened button on the header above.

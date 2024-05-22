@@ -10,7 +10,7 @@ const Header = () => {
                 <Link href="/ProgramList">Program List </Link>
                 <Link href="/Gened"> Gened</Link>
                 <Link href="/Login">Login</Link>
-                <Link href="/register"> Register</Link>
+                <Link href="/Register"> Register</Link>
             </div>
         </div>
     </header>

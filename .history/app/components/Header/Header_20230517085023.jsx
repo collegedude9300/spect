@@ -8,9 +8,9 @@ const Header = () => {
                 <Link href="/ProgramA">Program A</Link>
                 <Link href="/ProgramB">Program B</Link>
                 <Link href="/ProgramList">Program List </Link>
-                <Link href="/gened"> Gened</Link>
-                <Link href="/login">Login</Link>
-                <Link href="/register"> Register</Link>
+                <Link href="/Gened"> Gened</Link>
+                <Link href="/Login">Login</Link>
+                <Link href="/Register"> Register</Link>
             </div>
         </div>
     </header>

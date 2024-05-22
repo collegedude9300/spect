@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 6rem;
+  padding: 7rem;
   min-height: 100vh;
 }
 
@@ -38,7 +38,15 @@
   font-weight: 700;
   font-family: var(--font-mono);
 }
-
+.classHeader{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  color:rgb(17, 236, 145);
+}
 .grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(25%, auto));
