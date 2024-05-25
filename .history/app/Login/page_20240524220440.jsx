@@ -27,7 +27,7 @@ export default function Login() {
   const validateName = () => {
       const trimmedName = name.trim();
       if (!validator.isLength(trimmedName, { min: 2, max: 20 }) || !validator.isAlpha(trimmedName)) {
-        setNameError("Name must be between 2-20 characters, two words only, and consist of only alphabetic characters.");
+        setNameError("Name must be between 2 and 20 characters, two words only, and consist of only alphabetic characters.");
         return false;
       } else {
         setNameError("");
@@ -39,41 +39,20 @@ export default function Login() {
     e.preventDefault();
     setIsLoading(true);
 
-    try {
-      if (validateEmail() && validateName()) {
-        resetFormState();
-        await submitFormToServer();
-        alert("Form submitted successfully!"); 
-      }
-    } catch (error) {
-      // Handle any errors if needed
-      console.error("An error occurred during form submission:", error);
-      // Update UI with error message
-    } finally {
+    if (validateEmail() && validateName()) {
+      setEmail("");
+      setName("");
+      setEmailError("");
+      setNameError("");
+      // Simulate form submission delay
+      setTimeout(() => {
+        setIsLoading(false);
+        // Update UI with submission status message
+        // For example, set a state variable to display a success message on the form
+      }, 2000);
+    } else {
       setIsLoading(false);
     }
-  }
-
-  const resetFormState = () => {
-    setEmail("");
-    setName("");
-    setEmailError("");
-    setNameError("");
-  }
-
-  const submitFormToServer = async () => {
-    // Handle form submission asynchronously with server interaction
-    const response = await fetch('submitFormEndpoint', {
-      method: 'POST',
-      body: JSON.stringify({ email, name }),
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    });
-    if (!response.ok) {
-      throw new Error('Failed to submit form');
-    }
-    return response.json();
   }
 
   return (

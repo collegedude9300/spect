@@ -43,7 +43,9 @@ export default function Login() {
       if (validateEmail() && validateName()) {
         resetFormState();
         await submitFormToServer();
-        alert("Form submitted successfully!"); 
+        // Update UI with submission status message
+        // For example, set a state variable to display a success message on the form
+        alert("Form submitted successfully!"); // Example of adding a success message
       }
     } catch (error) {
       // Handle any errors if needed

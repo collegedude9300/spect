@@ -12,36 +12,46 @@ export default function Login() {
   const [name, setName] = useState("");
   const [emailError, setEmailError] = useState("");
   const [nameError, setNameError] = useState("");
-
-  const validateForm = () => {
-    let isValid = true;
-
-    if (!validator.isEmail(email) && !validator.isLength(name, { min: 2, max: 20 }) && validator.isAlpha(name.replace(/\s/g, ''))) {
+  const [isLoading, setIsLoading] = useState(false);
+  
+  const validateEmail = () => {
+    if (!validator.isEmail(email)) {
       setEmailError("Please enter a valid email address");
-      setNameError("Please enter a valid name. The name must be two words only.");
-      isValid = false;
-    } else if (!validator.isEmail(email)) {
-      setEmailError("Please enter a valid email address");
-      setNameError("");
-      isValid = false;
-    } else if (!validator.isLength(name, { min: 2, max: 20 }) && validator.isAlpha(name.replace(/\s/g, ''))) {
+      return false;
+    } else {
       setEmailError("");
-      setNameError("Please enter a valid name. The name must be two words only.");
-      isValid = false;
+      return true;
     }
-
-    return isValid;
   }
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const validateName = () => {
+      const trimmedName = name.trim();
+      if (!validator.isLength(trimmedName, { min: 2, max: 20 }) || !validator.isAlpha(trimmedName)) {
+        setNameError("Name must be between 2-20 characters, two words only, and consist of only alphabetic characters.");
+        return false;
+      } else {
+        setNameError("");
+        return true;
+      }
+    }
 
-    if (validateForm()) {
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsLoading(true);
+
+    if (validateEmail() && validateName()) {
       setEmail("");
       setName("");
       setEmailError("");
       setNameError("");
-      alert("Form submitted successfully");
+      // Simulate form submission delay
+      setTimeout(() => {
+        setIsLoading(false);
+        // Update UI with submission status message
+        // For example, set a state variable to display a success message on the form
+      }, 2000);
+    } else {
+      setIsLoading(false);
     }
   }
 
@@ -68,15 +78,15 @@ export default function Login() {
               <label htmlFor="email">Email address</label>
               <input type="email" className="form-control" id="email" placeholder="Enter email" value={email} onChange={(e) => setEmail(e.target.value)} />
               <br></br>
-              <div id="email-error">{emailError}</div>
-              <div id="name-error">{nameError}</div>
+              <div id="email-error" role="alert" aria-live="assertive">{emailError}</div>
+              <div id="name-error" role="alert" aria-live="assertive">{nameError}</div>
             </div>
-            <button type="submit" className="btn btn-primary">Submit</button>
+            <button type="submit" className="btn btn-primary" disabled={isLoading}>Submit</button>
           </form>
         </div>
         <VStack padding="10">
           <Link href="/">
-            <Button backgroundColor="brand.100">Home</Button>
+            <Button type="button" backgroundColor="brand.100">Home</Button>
           </Link>
         </VStack>
       </main>
