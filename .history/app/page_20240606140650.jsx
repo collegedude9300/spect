@@ -1,7 +1,8 @@
-//"use client"
-import fs from 'fs';
-import path from 'path';
-import matter from 'gray-matter'
+"use client"
+import Head from 'next/head'
+import Image from 'next/image'
+import Link from 'next/link'
+import { VStack, Button } from '@chakra-ui/react'
 import styles from './page.module.css'
 export default function Home({posts}) {
   return (
@@ -15,24 +16,7 @@ export default function Home({posts}) {
   )
 }
 export async function getStaticProps() {
-  const files= fs.readdirSync(path.join('posts'));
-
-  const posts = files.map(filename =>{
-
-    const slug= filename.replace('.md','')
-
-    const markdownWithMeta= fs.readFileSync(path.join('posts', filename),
-    'utf-8'
-  )
-  const {data:frontmatter}=matter (markdownWithMeta)
-    return{
-      slug,
-      frontmatter,
-    }
-  })
   return {
-    props: {
-      posts: 'The Posts',
-    },
+    props: {},
   }
 }

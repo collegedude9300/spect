@@ -4,6 +4,7 @@ import path from 'path';
 import matter from 'gray-matter'
 import styles from './page.module.css'
 export default function Home({posts}) {
+  console.log(posts);
   return (
     <main className={styles.main}>
       <title>Spectrum Station School</title>
@@ -26,10 +27,10 @@ export async function getStaticProps() {
   )
   const {data:frontmatter}=matter (markdownWithMeta)
     return{
-      slug,
-      frontmatter,
+      slug
     }
   })
+  console.log(posts);
   return {
     props: {
       posts: 'The Posts',

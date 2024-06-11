@@ -1,9 +1,9 @@
 //"use client"
 import fs from 'fs';
 import path from 'path';
-import matter from 'gray-matter'
 import styles from './page.module.css'
 export default function Home({posts}) {
+  console.log(posts);
   return (
     <main className={styles.main}>
       <title>Spectrum Station School</title>
@@ -24,12 +24,11 @@ export async function getStaticProps() {
     const markdownWithMeta= fs.readFileSync(path.join('posts', filename),
     'utf-8'
   )
-  const {data:frontmatter}=matter (markdownWithMeta)
     return{
-      slug,
-      frontmatter,
+      slug
     }
   })
+  console.log(posts);
   return {
     props: {
       posts: 'The Posts',
